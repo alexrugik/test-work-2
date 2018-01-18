@@ -1,0 +1,39 @@
+<div class="note-list">
+  <div class="row">
+    <div class="col-12">
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input
+            #searchedNote
+            matInput
+            name="searchedNote"
+            (blur)="onSearch(searchedNote.value)"
+            (keyup)="onSearch(searchedNote.value)"
+            placeholder="Find note!">
+        </mat-form-field>
+      </form>
+    </div>
+    <div class="col-12" [ngSwitch]="dataState">
+      <div *ngSwitchCase="dataStates.LOADING">
+        <fa name="cog" size="lg" animation="spin"></fa>
+      </div>
+      <div class="col-4" *ngSwitchCase="dataStates.LOADED">
+        <mat-list class="note-list-box"
+                  *ngFor="let note of notes">
+          <mat-list-item>
+            <span>Note name: </span>
+            <a class="note-title" routerLink="/note-details/{{note.id}}">{{note.title}}</a>
+          </mat-list-item>
+        </mat-list>
+      </div>
+      <div *ngSwitchCase="dataStates.EMPTY">
+        <p>No Data here!</p>
+      </div>
+      <div *ngSwitchCase="dataStates.ERROR">
+        <p>We have an error! Please try again!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+

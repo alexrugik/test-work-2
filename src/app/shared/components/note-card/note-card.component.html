@@ -1,0 +1,20 @@
+<mat-card *ngIf="note">
+  <mat-card-header>
+    <mat-card-title>
+      <h2>Title: {{note.title}}</h2>
+    </mat-card-title>
+    <mat-card-subtitle>It's your note!</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      <span class="main-text">Description: </span> {{note.description}}
+    </p>
+    <p>
+      <span class="main-text">Main keywords: </span>{{note.keyWords}}
+    </p>
+  </mat-card-content>
+  <mat-card-actions>
+    <p>
+      <span class="main-text"> Created at: </span>{{parseDate(note.createdAt)}}</p>
+  </mat-card-actions>
+</mat-card>

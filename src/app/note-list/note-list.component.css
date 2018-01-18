@@ -1,0 +1,11 @@
+.note-list {
+  margin-top: 30px;
+}
+
+.note-list-box {
+  border: 1px solid rgba(0,0,0,.42);
+}
+
+.note-title {
+  margin-left: 7px;
+}
