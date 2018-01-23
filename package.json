@@ -2,7 +2,7 @@
   "name": "test-work",
   "version": "0.0.0",
   "license": "MIT",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "ng": "ng",
     "start server": "ng serve",
@@ -14,6 +14,9 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/cli": "1.6.4",
+    "@angular/compiler-cli": "^5.1.0",
+    "@angular/language-service": "^5.1.0",
     "@angular-devkit/core": "0.0.28",
     "@angular/animations": "^5.2.0",
     "@angular/cdk": "^5.0.4",
