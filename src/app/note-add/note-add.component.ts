@@ -8,7 +8,7 @@ import {NotesService} from '../shared/services/note.service';
   styleUrls: ['./note-add.component.css']
 })
 export class NoteAddComponent implements OnInit {
-  private note = {};
+  note: any = {};
 
   constructor(private notesService: NotesService) {
   }

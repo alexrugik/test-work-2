@@ -8,5 +8,5 @@ import {Tabs} from './app.declarations';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  private tabs: Tabs[] = TABS;
+  tabs: Tabs[] = TABS;
 }
